@@ -1,0 +1,182 @@
+/*
+  For small screens only
+*/
+
+@media only screen and (max-width: 991px) {
+  .msheader .msheaderright a i {
+    font-size: 18px;
+  }
+  .dashbuttons .addbutton {
+    margin-bottom: 10px;
+  }
+  .panel-heading .dropdown-menu {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  #mscontainer .panel .panel-heading {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .msheader .msheaderright {
+    margin-top: 0;
+  }
+  #mscontainer .panel .panel-heading {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .msheader .msheaderright {
+    margin-top: 0;
+  }
+  #mscontainer .panel .panel-heading {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  footer {
+    font-size: 11px !important;
+  }
+
+  .panel-default .right-align {
+    text-align: right !important;
+  }
+
+  .panel-default .left-align {
+    text-align: left !important;
+  }
+
+  .breadcrumb li {
+    display: none !important;
+  }
+
+  .breadcrumb > li + li:before {
+    padding: 0;
+    content: "";
+  }
+
+  .breadcrumb .active {
+    display: inline !important;
+  }
+
+  .center_dropdown {
+    left: 50% !important;
+    margin-left: -70px;
+  }
+
+  .center_dropdown:after {
+    left: 50% !important;
+    margin-left: -70px;
+  }
+
+  .bbButtons span {
+    display: block;
+    margin: 5px 0 5px 0;
+  }
+
+  .mobilebreakpoint {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .max_height_home {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .hideminiscreen {
+    display: none !important;
+  }
+
+  .respDeptArea {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .mobilemenu {
+    text-align: center !important;
+  }
+
+  .mobilemenu .dropdown-menu li {
+    font-size: 13px !important;
+  }
+
+  .dropdown-menu-right .mailboxcount .unread {
+    font-weight: normal !important;
+    color: #258EA1 !important;
+  }
+
+  .dropdown-menu-right .mailboxcount .read {
+    font-weight: normal !important;
+    color:#000 !important;
+  }
+  .dashbuttons .addbutton {
+    margin-bottom: 10px;
+  }
+  .panel-heading .dropdown-menu {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  #mscontainer .panel .panel-heading {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width:326px) {
+  .verysmalladjustment {
+    right: auto !important;
+    left: 0 !important;
+  }
+  #mscontainer .panel .panel-heading {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width : 320px) {
+  .navbar-inner .container {
+    height: 45px;
+  }
+  .pushy a {
+    font-size: 15px !important;
+  }
+  .panel-heading .dropdown-menu {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  #mscontainer .panel .panel-heading {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .navbar-inner .container {
+    height: 45px;
+  }
+  .pushy a {
+    font-size: 15px !important;
+  }
+  .panel-heading .dropdown-menu {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  #mscontainer .panel .panel-heading {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width : 768px) {
+  .navbar-inner .container {
+    height: 45px;
+  }
+  .pushy a {
+    font-size: 15px !important;
+  }
+  .panel-heading .dropdown-menu {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  #mscontainer .panel .panel-heading {
+    font-size: 14px;
+  }
+}

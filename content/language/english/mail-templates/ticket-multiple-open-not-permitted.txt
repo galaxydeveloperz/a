@@ -1,0 +1,22 @@
+Ticket Not Accepted
+
+<-{separater}->
+
+Hi {NAME},
+
+You recently sent the following support message to our system:
+
+Subject: {SUBJECT}
+
+Your ticket could not be accepted because you already have at least 1 open ticket.
+
+All open tickets must be resolved before further tickets are accepted.
+
+We apologise for any inconvenience.
+
+Kind regards,
+
+<-{separater}->
+
+{WEBSITE_NAME}
+{WEBSITE_URL}

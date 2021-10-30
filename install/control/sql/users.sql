@@ -1,0 +1,2 @@
+INSERT INTO `{prefix}users` (`id`, `ts`, `name`, `email`, `accpass`, `signature`, `notify`, `pageAccess`, `emailSigs`, `notePadEnable`,`delPriv`, `helplink`, `nameFrom`, `emailFrom`, `timezone`, `enabled`, `admin`, `timer`) VALUES (
+1, UNIX_TIMESTAMP(), 'admin', '{email}', '{pass}', '', 'yes', '', 'no', 'yes', 'yes', 'yes', 'admin', '{email}', '{zone}', 'yes', 'yes', 'no')

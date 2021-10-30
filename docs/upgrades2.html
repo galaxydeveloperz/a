@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+
+	<meta charset="utf-8">
+    <title>Upgrades - Versions 2.0 to 3.0: Maian Support - Documentation</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="pages/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="pages/css/bootstrap-responsive.css" type="text/css">
+    <link rel="stylesheet" href="pages/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="pages/css/font-awesome/font-awesome.css">
+
+	<script src="pages/js/jquery.js"></script>
+	<link rel="stylesheet" href="pages/css/ms.css" type="text/css">
+
+	<!--[if lt IE 9]>
+    <script src="pages/js/html5.js"></script>
+    <![endif]-->
+
+    <link rel="SHORTCUT ICON" href="favicon.ico">
+  </head>
+
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7"> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8"> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9"> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!-->
+  <body class="">
+  <!--<![endif]-->
+
+   <div class="navbar">
+        <div class="navbar-inner">
+                <script src="pages/js/header.js"></script>
+				<noscript>Please enable javascript to view header.</noscript>
+				<a class="brand" href="index.html" title="Maian Support: Documentation"><span class="first">Maian Support: Documentation</span></a>
+	    </div>
+    </div>
+
+  <div class="sidebar-nav">
+  <script src="pages/js/nav-menu.js"></script>
+  <noscript>Please enable javascript to view menu.</noscript>
+  </div>
+  <div class="content">
+
+  <div class="header">
+
+	<h1 class="page-title">Upgrades - Versions 2.0 to 3.0</h1>
+    <span class="clearfix"></span>
+
+  </div>
+
+  <ul class="breadcrumb">
+    <li>Maian Support <span class="divider">/</span></li>
+    <li class="active">Upgrades - Versions 2.0 to 3.0</li>
+  </ul>
+
+  <div class="container-fluid">
+
+   <div class="block">
+    <p class="block-heading">Upgrade Instructions</p>
+    <div class="block-body">
+     This is only for versions 2.* to 3.0.<br><br>
+     Please ensure you have a full backup of your current system before starting the upgrade.
+	</div>
+
+   </div>
+
+   <div class="block" style="border:1px solid #555">
+	 <p class="block-heading" style="background:#ff9999;color:#fff;border-bottom:1px solid #555">Passwords - Please Read</p>
+     <div class="block-body">
+     If you are upgrading from a version older than 4.0, all passwords will be reset. In 4.0+ passwords are now stored using the PHP password API
+     which uses bcrypt. This favours the less secure sha1 used in previous versions.<br><br>
+     Once the upgrade has completed, you`ll need to use the <a href="reset.html">reset</a> option to reset all staff passwords.<br><br>
+     Account visitors will need to use the 'forgot password' option to reset their password. You can also <a href="tools.html">batch reset</a> the passwords via the admin interface and
+     send out a broadcast message to let people know.
+     </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">Templates</p>
+     <div class="block-body">
+	     Any version prior to 3.1 is not compatible with the templates, due to the bootstrap change to 3.0. All template changes will be reset and overwritten.
+     </div>
+    </div>
+
+   <div class="block">
+	 <p class="block-heading">How to Upgrade - Please Read Carefully</p>
+     <div class="block-body">
+      <span class="badge">1</span> Make a backup of your support system and database.<br><br>
+      <span class="badge">2</span> Download the <a href="https://www.maiansupport.com/download.html" onclick="window.open(this);return false">latest version of Maian Support</a> and unzip to desktop.<br><br>
+      <span class="badge">3</span> Remove 'control/connect.inc.php' &amp; 'licence.lic' from the new version.<br><br>
+      <b>NOTE</b>: that 'control/connect.inc.php' must be renamed as 'control/connect.php' for later versions.<br><br>
+      <span class="badge">4</span> If you added additional priority levels to 'control/priority-levels.php' in v2.1, ensure this file is in your
+      installation before you upgrade the database.  This is not required if you are running 2.2 or higher already.<br><br>
+      <span class="badge">5</span> Overwrite your installation with the new file set of the latest version.<br><br>
+      <span class="badge">6</span> Access your support 'install/upgrade.php' file in a browser and follow the instructions.<br><br>
+      <b>NOTE</b>: install/upgrade.php NOT install/index.php<br><br>
+      <span class="badge">7</span> Once the upgrade is complete, remove or rename the 'install' folder.<br><br>
+      <span class="badge">8</span> Refer to the latest version <a href="install_2.html">installation instructions</a> for any new folders that require permissions.<br><br>
+      <span class="badge">9</span> Refer to the latest version <a href="install_2.html">installation instructions</a> for any new crontabs/job that may require setting up.<br><br>
+      <span class="badge">10</span> Finally, refer to the changelog to see whats new. See below.<br><br>
+      Hope you enjoy the latest version of Maian Support.
+     </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">Changelog</p>
+     <div class="block-body">
+	   To view the changelog, <a href="https://www.maiansupport.com/changelog.txt" onclick="window.open(this);return false" title="Changelog">here</a>.
+     </div>
+    </div>
+
+    <p>
+    <a href="upgrades.html"><i class="icon-chevron-left"></i> Return to Upgrade Overview</a>
+   </p>
+
+  <div class="row-fluid">
+	<script src="pages/js/footer.js"></script>
+	<noscript>Please enable javascript to view footer.</noscript>
+   </div>
+
+  </div>
+
+  </div>
+  <script src="pages/js/plugins/jquery.bootstrap.js"></script>
+
+ </body>
+</html>

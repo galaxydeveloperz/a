@@ -1,0 +1,22 @@
+Password Reset
+
+<-{separater}->
+
+Hi {NAME},
+
+You are receiving this email because your password has been reset at "{WEBSITE_NAME}".
+
+Your log in details are as follows:
+
+Email: {EMAIL}
+Password: {PASS}
+{LOGIN_URL}
+
+Please log in and update your password to something you can remember as soon as possible.
+
+Kind regards,
+
+<-{separater}->
+
+{WEBSITE_NAME} Support Team
+{WEBSITE_URL}

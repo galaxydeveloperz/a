@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+
+	<meta charset="utf-8">
+    <title>Upgrades - Template Changes v4.0: Maian Support - Documentation</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="pages/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="pages/css/bootstrap-responsive.css" type="text/css">
+    <link rel="stylesheet" href="pages/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="pages/css/font-awesome/font-awesome.css">
+
+	<script src="pages/js/jquery.js"></script>
+	<link rel="stylesheet" href="pages/css/ms.css" type="text/css">
+
+	<!--[if lt IE 9]>
+    <script src="pages/js/html5.js"></script>
+    <![endif]-->
+
+    <link rel="SHORTCUT ICON" href="favicon.ico">
+  </head>
+
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7"> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8"> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9"> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!-->
+  <body class="">
+  <!--<![endif]-->
+
+   <div class="navbar">
+        <div class="navbar-inner">
+                <script src="pages/js/header.js"></script>
+				<noscript>Please enable javascript to view header.</noscript>
+				<a class="brand" href="index.html" title="Maian Support: Documentation"><span class="first">Maian Support: Documentation</span></a>
+	    </div>
+    </div>
+
+  <div class="sidebar-nav">
+  <script src="pages/js/nav-menu.js"></script>
+  <noscript>Please enable javascript to view menu.</noscript>
+  </div>
+  <div class="content">
+
+  <div class="header">
+
+	<h1 class="page-title">Upgrades - Template Changes v4.0</h1>
+    <span class="clearfix"></span>
+
+  </div>
+
+  <ul class="breadcrumb">
+    <li>Maian Support <span class="divider">/</span></li>
+    <li class="active">Upgrades - Template Changes v4.0</li>
+  </ul>
+
+  <div class="container-fluid">
+
+   <div class="block">
+    <p class="block-heading">Information</p>
+    <div class="block-body">
+     Template changes are shown below for v4.0. If you aren`t sure, view the current file in the latest zip.
+	</div>
+
+   </div>
+
+   <div class="block">
+	 <p class="block-heading">New Files / Folders</p>
+     <div class="block-body">
+       content/**theme**/html/pagination/
+	   </div>
+    </div>
+
+   <div class="block">
+	 <p class="block-heading">Header Template Updates</p>
+     <div class="block-body">
+       None
+	   </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">Footer Template Updates</p>
+     <div class="block-body">
+       <span class="badge">1</span> After:<br><br>
+       &lt;div class="overlaySpinner" style="display:none"&gt;&lt;/div&gt;<br><br>
+
+       Add:<br><br>
+       &lt;?php<br>
+       // Tawk.to live support<br>
+       echo $this->TAWK_TO;<br>
+       ?&gt;<br><br>
+
+      <span class="badge">2</span> Before the closing <b>&lt;/body&gt;</b> tag add the following code:<br><br>
+
+       &lt;?php<br>
+       if (defined('TICKET_CREATION') && $this->SETTINGS->defdept > 0) {<br>
+       ?><br>
+       &lt;script&gt;<br>
+       jQuery(document).ready(function() {<br>
+         mswDeptLoader('&lt;?php echo $this->SETTINGS->defdept; ?&gt;');<br>
+       });<br>
+       &lt;/script&gt;<br>
+       &lt;?php<br>
+       }<br>
+       ?&gt;
+	   </div>
+    </div>
+
+   <div class="block">
+	 <p class="block-heading">Other Template Updates</p>
+     <div class="block-body">
+       <span class="badge">1</span> <b>content/**/html/ticket-attachment.htm</b><br><br>
+
+       Find:<br><br>
+       href=&quot;?attachment={id}&quot;<br><br>
+
+       Change to:<br><br>
+       href=&quot;#&quot; onclick=&quot;mswDL('{id}','dla');return false&quot;<br><br>
+
+       <span class="badge">2</span> <b>content/**/html/faq-attachment-link.htm</b><br><br>
+
+       Find:<br><br>
+       href=&quot;{url}&quot;<br><br>
+
+       Change to:<br><br>
+       href=&quot;#&quot; onclick=&quot;mswDL('{id}','dl');return false&quot;<br><br>
+
+       <span class="badge">3</span> From the <b>content/**/account-create.tpl.php</b> &amp; <b>content/**/account-create-ticket.tpl.php</b> templates remove:<br><br>
+
+       &lt;?php<br>
+       // SPAM PREVENTION IF RECAPTCHA ENABLED<br>
+       // html/recaptcha.htm<br>
+       echo $this->RECAPTCHA;<br>
+       ?&gt;<br><br>
+
+       and<br><br>
+
+       if ($this->RECAPTCHA) {<br>
+        define('LOAD_RECAPTCHA', 1);<br>
+       }<br><br>
+
+       <span class="badge">4</span> Add '<b>content/_default_set/custom-templates</b>' folder from latest zip to all your theme folders if it is missing.
+	   </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">CSS Updates</p>
+     <div class="block-body">
+       None
+	   </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">Javascript Updates</p>
+     <div class="block-body">
+       <span class="badge">1</span> In the <b>js/msops.js</b> file in the <b>mswProcessMultiPart</b> function find:<br><br>
+
+       jQuery('#mswform').submit(function() {<br><br>
+
+       Before that add:<br><br>
+       var d = new Date();<br>
+       jQuery('#mswform').append('&lt;input type="hidden" name="js_ts" value="' + d.getFullYear() + '"&gt;');<br><br>
+
+       <span class="badge">2</span> Open the latest <b>content/**/js/msops.js</b> file in a text editor.<br><br>
+
+       Copy and paste the <b>mswDeptLoader</b> function to overwrite the one currently in your setup.<br><br>
+
+      <span class="badge">3</span> Open the latest <b>content/**/js/msops.js</b> file in a text editor.<br><br>
+
+       Add the <b>mswDL(id, parm)</b> function to your existing msops.js file<br><br>
+
+       <span class="badge">4</span> Update <b>content/**/js/plugins/jquery.uploader.js</b> file.
+	   </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">Function Names</p>
+     <div class="block-body">
+       This lists PHP function name changes. If you have them in your template, they must be renamed:<br><br>
+       Old Name -&gt; <b>New Name</b><br><br>
+       mswCleanData -&gt; <b>mswCD</b><br>
+       mswSafeDisplay -&gt; <b>mswSH</b><br>
+       mswIPAddresses -&gt; <b>mswIP</b><br>
+       mswFileSizeConversion -&gt; <b>mswFSC</b><br>
+       mswGetTableData -&gt; <b>mswSQL_table</b><br>
+       mswRowCount -&gt; <b>mswSQL_rows</b><br>
+       mswSQL -&gt; <b>mswSQL</b><br>
+       mswMultiDimensionalArrayMap -&gt; <b>mswMDAM</b><br>
+       mswDetectSSLConnection -&gt; <b>mswSSL</b>
+	   </div>
+    </div>
+
+    <p>
+    <a href="upgrades1.html"><i class="icon-chevron-left"></i> Return to Upgrade Instructions</a>
+   </p>
+
+  <div class="row-fluid">
+	<script src="pages/js/footer.js"></script>
+	<noscript>Please enable javascript to view footer.</noscript>
+   </div>
+
+  </div>
+
+  </div>
+  <script src="pages/js/plugins/jquery.bootstrap.js"></script>
+
+ </body>
+</html>

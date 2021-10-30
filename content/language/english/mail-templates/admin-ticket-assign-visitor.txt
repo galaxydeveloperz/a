@@ -1,0 +1,18 @@
+Support Ticket Assigned
+
+<-{separater}->
+
+Hi {NAME},
+
+Your support ticket has now been assigned to the following team members:
+
+{ASSIGNED}
+
+Another update will follow as soon as possible.
+
+Kind regards,
+
+<-{separater}->
+
+{WEBSITE_NAME}
+{WEBSITE_URL}

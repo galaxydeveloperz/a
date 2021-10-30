@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+
+	<meta charset="utf-8">
+    <title>Upgrades - v3.1 or Later: Maian Support - Documentation</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="pages/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="pages/css/bootstrap-responsive.css" type="text/css">
+    <link rel="stylesheet" href="pages/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="pages/css/font-awesome/font-awesome.css">
+
+	<script src="pages/js/jquery.js"></script>
+	<link rel="stylesheet" href="pages/css/ms.css" type="text/css">
+
+	<!--[if lt IE 9]>
+    <script src="pages/js/html5.js"></script>
+    <![endif]-->
+
+    <link rel="SHORTCUT ICON" href="favicon.ico">
+  </head>
+
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7"> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8"> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9"> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!-->
+  <body class="">
+  <!--<![endif]-->
+
+   <div class="navbar">
+        <div class="navbar-inner">
+                <script src="pages/js/header.js"></script>
+				<noscript>Please enable javascript to view header.</noscript>
+				<a class="brand" href="index.html" title="Maian Support: Documentation"><span class="first">Maian Support: Documentation</span></a>
+	    </div>
+    </div>
+
+  <div class="sidebar-nav">
+  <script src="pages/js/nav-menu.js"></script>
+  <noscript>Please enable javascript to view menu.</noscript>
+  </div>
+  <div class="content">
+
+  <div class="header">
+
+	<h1 class="page-title">Upgrades - v3.1 or Later</h1>
+    <span class="clearfix"></span>
+
+  </div>
+
+  <ul class="breadcrumb">
+    <li>Maian Support <span class="divider">/</span></li>
+    <li class="active">Upgrades - v3.1 or Later</li>
+  </ul>
+
+  <div class="container-fluid">
+
+   <div class="block">
+    <p class="block-heading">Upgrade Instructions</p>
+    <div class="block-body">
+     This is only for versions 3.1 or Later.<br><br>
+     Please ensure you have a full backup of your current system before starting the upgrade.
+	</div>
+
+   </div>
+
+   <div class="block" style="border:1px solid #555">
+	 <p class="block-heading" style="background:#ff9999;color:#fff;border-bottom:1px solid #555">Passwords - Please Read</p>
+     <div class="block-body">
+     If you are upgrading from a version older than 4.0, all passwords will be reset. In 4.0+ passwords are now stored using the PHP password API
+     which uses bcrypt. This favours the less secure sha1 used in previous versions.<br><br>
+     Once the upgrade has completed, you`ll need to use the <a href="reset.html">reset</a> option to reset all staff passwords.<br><br>
+     Account visitors will need to use the 'forgot password' option to reset their password. You can also <a href="tools.html">batch reset</a> the passwords via the admin interface and
+     send out a broadcast message to let people know.
+     </div>
+    </div>
+
+   <div class="block">
+	 <p class="block-heading">How to Upgrade</p>
+     <div class="block-body">
+       <span class="badge">1</span> Backup your existing structure and database.<br><br>
+       <span class="badge">2</span> <a href="https://www.maiansupport.com/download.html" onclick="window.open(this);return false">Download</a> the latest version of <a href="https://www.maiansupport.com" onclick="window.open(this);return false">Maian Support</a>.<br><br>
+       <span class="badge">3</span> From the latest archive, remove the following files:<br><br>
+       <b>control/connect.php<br>licence.lic</b><br><br>
+       <span class="badge">4</span> Upload all other files to replace/overwrite your existing structure.<br><br>
+       <span class="badge">5</span> Access the upgrade installer in your browser:<br><br>
+       <b>https://www.example.com/helpdesk/install/upgrade.php</b><br><br>
+       <span class="badge">6</span> Follow the instructions to upgrade your setup.<br><br>
+       <span class="badge">7</span> Delete the "install" folder from your installation.<br><br>
+       <span class="badge">8</span> <b>Important</b>: If you are running a version less than 4.3, you need to update the cron job
+       paths if you are using them. More info <a href="install_3.html">here</a>.<br><br>
+       <span class="badge">9</span> Refer to the <a href="https://www.maiansupport.com/changelog.html" onclick="window.open(this);return false">Maian Support Changelog</a> to see what has been added/updated in the latest version.<br><br>
+       <span class="badge">10</span> If you are using a custom template, check the templates section below for any new folders or file locations that may need updating for the version you are upgrading to. If no changes
+       are shown for the version you are upgrading to, you can ignore this.<br><br>
+       <span class="badge">11</span> Upgrade completed
+     </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">Templates</p>
+     <div class="block-body">
+       If you made custom changes to the default template set, details are provided of changes to the latest default template set, which need to be deployed to your
+       existing set for it to work with the latest changes. Only versions shown below have any template changes. Click for information.<br><br>
+       <a href="upgrades-tmp-4.0.html">v4.0 Template Changes &amp; Updates</a><br>
+	     <a href="upgrades-tmp-4.2.html">v4.2 Template Changes &amp; Updates</a><br>
+	     <a href="upgrades-tmp-4.3.html">v4.3 Template Changes &amp; Updates</a>
+	   </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">Language</p>
+     <div class="block-body">
+       This section details language changes which are useful if you are using a language translation.<br><br>
+       <a href="upgrades-lang.html">Language Changes &amp; Additions</a>
+	   </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">Changelog</p>
+     <div class="block-body">
+	   To view the changelog, <a href="https://www.maiansupport.com/changelog.txt" onclick="window.open(this);return false" title="Changelog">here</a>.
+     </div>
+    </div>
+
+    <p>
+    <a href="upgrades.html"><i class="icon-chevron-left"></i> Return to Upgrade Overview</a>
+   </p>
+
+  <div class="row-fluid">
+	<script src="pages/js/footer.js"></script>
+	<noscript>Please enable javascript to view footer.</noscript>
+   </div>
+
+  </div>
+
+  </div>
+  <script src="pages/js/plugins/jquery.bootstrap.js"></script>
+
+ </body>
+</html>

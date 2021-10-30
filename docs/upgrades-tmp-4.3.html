@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+
+	<meta charset="utf-8">
+    <title>Upgrades - Template Changes v4.3: Maian Support - Documentation</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="pages/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="pages/css/bootstrap-responsive.css" type="text/css">
+    <link rel="stylesheet" href="pages/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="pages/css/font-awesome/font-awesome.css">
+
+	<script src="pages/js/jquery.js"></script>
+	<link rel="stylesheet" href="pages/css/ms.css" type="text/css">
+
+	<!--[if lt IE 9]>
+    <script src="pages/js/html5.js"></script>
+    <![endif]-->
+
+    <link rel="SHORTCUT ICON" href="favicon.ico">
+  </head>
+
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7"> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8"> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9"> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!-->
+  <body class="">
+  <!--<![endif]-->
+
+   <div class="navbar">
+        <div class="navbar-inner">
+                <script src="pages/js/header.js"></script>
+				<noscript>Please enable javascript to view header.</noscript>
+				<a class="brand" href="index.html" title="Maian Support: Documentation"><span class="first">Maian Support: Documentation</span></a>
+	    </div>
+    </div>
+
+  <div class="sidebar-nav">
+  <script src="pages/js/nav-menu.js"></script>
+  <noscript>Please enable javascript to view menu.</noscript>
+  </div>
+  <div class="content">
+
+  <div class="header">
+
+	<h1 class="page-title">Upgrades - Template Changes v4.3</h1>
+    <span class="clearfix"></span>
+
+  </div>
+
+  <ul class="breadcrumb">
+    <li>Maian Support <span class="divider">/</span></li>
+    <li class="active">Upgrades - Template Changes v4.3</li>
+  </ul>
+
+  <div class="container-fluid">
+
+   <div class="block">
+    <p class="block-heading">Information</p>
+    <div class="block-body">
+     Template changes are shown below for v4.3. If you aren`t sure, view the current file in the latest zip.
+	</div>
+
+   </div>
+
+   <div class="block">
+	 <p class="block-heading">New Locations</p>
+     <div class="block-body">
+       The cron job files will need updating to run from the following:<br><br>
+       control/cron/close-tickets.php<br>
+       control/cron/db-backup.php<br>
+       control/cron/email-digest.php
+     </div>
+    </div>
+   
+   <div class="block">
+	 <p class="block-heading">New Files / Folders</p>
+     <div class="block-body">
+       content/**theme**/html/custom-fields/input-calendar.htm<br>
+       content/**theme**/html/js/date-picker.htm<br>
+       content/**theme**/html/js/draft.htm
+     </div>
+    </div>
+
+   <div class="block">
+	 <p class="block-heading">Header Template Updates</p>
+     <div class="block-body">
+       None
+	   </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">Footer Template Updates</p>
+     <div class="block-body">
+       None
+	   </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">Nav Menu Updates</p>
+     <div class="block-body">
+       None
+	   </div>
+    </div>
+
+   <div class="block">
+	 <p class="block-heading">Other Template Updates</p>
+     <div class="block-body">
+       <b>content/**theme**/account-view-dispute.tpl.php</b><br><br>
+       <span class="badge">Find line 60</span> <br>
+        if ($this->TICKET->ticketStatus == 'open' && $this->REPLY_PERMISSIONS == 'yes') {<br><br>
+
+        <span class="badge">Change to:</span><br>
+        if (!in_array($this->TICKET->ticketStatus, array('close','closed')) && $this->REPLY_PERMISSIONS == 'yes') {<br><br>
+
+        <span class="badge">Find line 188:</span> <br>
+        if ($this->TICKET->ticketStatus == 'open' && $this->REPLY_PERMISSIONS == 'yes' &&<br><br>
+
+        <span class="badge">Change to:</span><br>
+        if (!in_array($this->TICKET->ticketStatus, array('close','closed')) && $this->REPLY_PERMISSIONS == 'yes' &&<br><br>
+
+        <span class="badge">Find line 203:</span> <br>
+        } elseif (in_array($this->TICKET->replyStatus, array('admin','start')) && $this->SETTINGS->disputeAdminStop == 'yes') {<br><br>
+
+        <span class="badge">Change to:</span><br>
+        } elseif (in_array($this->LAST_REPLY_INFO[2], array('visitor')) && $this->SETTINGS->disputeAdminStop == 'yes') {
+        
+        <hr>
+        
+        <b>content/**theme**/account-view-ticket.tpl.php</b><br><br>
+        
+        <span class="badge">Find line 33:</span> <br>
+        if ($this->TICKET->ticketStatus == 'open') {<br><br>
+
+        <span class="badge">Change to:</span><br>
+        if (!in_array($this->TICKET->ticketStatus, array('close','closed'))) {<br><br>
+
+        <span class="badge">Find line 131:</span> <br>
+        if ($this->TICKET->ticketStatus == 'open' && $this->TICKET->assignedto != 'waiting') {<br><br>
+
+        <span class="badge">Change to:</span><br>
+        if (!in_array($this->TICKET->ticketStatus, array('close','closed')) && $this->TICKET->assignedto != 'waiting') {
+        
+        <hr>
+        
+        <b>content/**theme**/account-view-dispute.tpl.php<br>
+        content/**theme**/account-view-ticket.tpl.php</b><br><br>
+        
+        <span class="badge">Find line 129 &amp; 186</span> <br>
+          if (!in_array($this->TICKET->ticketStatus, array('close','closed')) && $this->TICKET->assignedto != 'waiting') {<br><br>
+
+        <span class="badge">Change to:</span><br>
+          if (!in_array($this->TICKET->ticketStatus, array('close','closed','status-lock')) && $this->TICKET->assignedto != 'waiting') {<br><br>
+
+          <span class="badge">after:</span><br>
+          case 'waiting':<br>
+            $msg = $this->TXT[20];<br>
+            break;<br><br>
+
+          <span class="badge">add:</span><br>
+          case 'status-lock':<br>
+            $msg = $this->TXT2[0][0];<br>
+            break;
+            
+          <hr>
+          
+          <b>content/**theme**/account-view-ticket-reply.tpl.php</b><br><br>
+          
+          <span class="badge">after:</span><br>
+          &lt;div class="panel-footer"&gt;<br><br>
+
+          <span class="badge">add:</span><br>
+          &lt;div class="pull-right draftarea" id="draft_&lt;?php echo $this->TICKET->id; ?&gt;"&gt;&lt;/div&gt;
+          
+          <hr>
+          
+          <b>content/**theme**/account-create-ticket.tpl.php</b>
+          
+          <span class="badge">after:</span><br>
+          &lt;div class="panel-footer"&gt;<br><br>
+
+          <span class="badge">add:</span><br>
+          &lt;div class="pull-right draftarea" id="draft_add"&gt;&lt;/div&gt;
+          
+	   </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">CSS Updates</p>
+     <div class="block-body">
+       None
+	   </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">Javascript Updates</p>
+     <div class="block-body">
+       None
+     </div>
+    </div>
+
+    <p>
+    <a href="upgrades1.html"><i class="icon-chevron-left"></i> Return to Upgrade Instructions</a>
+   </p>
+
+  <div class="row-fluid">
+	<script src="pages/js/footer.js"></script>
+	<noscript>Please enable javascript to view footer.</noscript>
+   </div>
+
+  </div>
+
+  </div>
+  <script src="pages/js/plugins/jquery.bootstrap.js"></script>
+
+ </body>
+</html>

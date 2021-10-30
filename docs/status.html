@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+
+	<meta charset="utf-8">
+    <title>Add Status: Maian Support - Documentation</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="pages/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="pages/css/bootstrap-responsive.css" type="text/css">
+    <link rel="stylesheet" href="pages/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="pages/css/font-awesome/font-awesome.css">
+
+	<script src="pages/js/jquery.js"></script>
+	<link rel="stylesheet" href="pages/css/ms.css" type="text/css">
+
+	<!--[if lt IE 9]>
+    <script src="pages/js/html5.js"></script>
+    <![endif]-->
+
+    <link rel="SHORTCUT ICON" href="favicon.ico">
+  </head>
+
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7"> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8"> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9"> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!-->
+  <body class="">
+  <!--<![endif]-->
+
+   <div class="navbar">
+        <div class="navbar-inner">
+                <script src="pages/js/header.js"></script>
+				<noscript>Please enable javascript to view header.</noscript>
+				<a class="brand" href="index.html" title="Maian Support: Documentation"><span class="first">Maian Support: Documentation</span></a>
+	    </div>
+    </div>
+
+  <div class="sidebar-nav">
+  <script src="pages/js/nav-menu.js"></script>
+  <noscript>Please enable javascript to view menu.</noscript>
+  </div>
+  <div class="content">
+
+  <div class="header">
+
+	<h1 class="page-title">Add Status</h1>
+    <span class="clearfix"></span>
+
+  </div>
+
+  <ul class="breadcrumb">
+    <li>Ticket Statuses <span class="divider">/</span></li>
+    <li class="active">Add Status</li>
+  </ul>
+
+  <div class="container-fluid">
+
+   <div class="block">
+    <p class="block-heading">Overview</p>
+    <div class="block-body">
+     Enables adding of new ticket statuses for backend use ONLY. Please read carefully. Click example images to display full size version in new tab/window.
+    </div>
+   </div>
+
+   <div class="block">
+	 <p class="block-heading">Screenshot</p>
+     <div class="block-body">
+	   <a href="screenshots/135.jpg" onclick="window.open(this);return false"><img src="screenshots/135.jpg" class="screenshot" alt="Screenshot" title="Click for Fullsize"></a>
+     </div>
+    </div>
+
+	<div class="block">
+	 <p class="block-heading">Default Statuses</p>
+     <div class="block-body">
+	   Note that Open, Closed and Locked are default statuses and can be renamed, but not removed. These are the main legacy
+	   statuses from all previous versions.<br><br>
+	   <span class="highlightText">Open</span> - Refers to open tickets and the Open Tickets menu option.<br><br>
+	   <span class="highlightText">Close</span> - Refers to closed tickets and the Closed Tickets menu option.<br><br>
+	   <span class="highlightText">Locked</span> - The Locked status remains the same as 
+     previous versions and doesn't allow the visitor to re-open the ticket. The lock option remains regardless of it's name, so on
+     ticket list / view screens, the 'Lock Ticket' option refers to this status. You can always change the text in the language
+     files if required.<br><br>
+     Above also applies to disputes if enabled.</div>
+    </div>
+	
+	<div class="block">
+	 <p class="block-heading">New Status</p>
+     <div class="block-body">
+	   <span class="highlightText">Status Display Name</span> - Enter new ticket status name. Max characters 100. Additional
+	   ticket statuses are treated the same as open tickets. If a ticket has a custom status it is open. Statuses are just a 
+	   way of filtering tickets.<br><br>
+	   <span class="highlightText">Ticket Locked to Visitors</span> - If set, ticket is locked to visitors in this status and
+	   visitors cannot add any more replies. If replies are sent via imap they are ignored. Note that this only applies to
+	   new statuses, the behaviour of the default statuses Open, Closed &amp; Locked remains the same.<br><br>
+	   <span class="highlightText">Ticket Ignored by Auto Close Option</span> - If set, tickets with this open status are
+	   ignored by the <a href="auto-close.html">Auto Close</a> tickets cron routine.</div>
+    </div>
+    
+  <div class="block">
+	 <p class="block-heading">Display</p>
+     <div class="block-body">
+	   When you add a new status, a new option appears for that status in the off canvas menu
+	   in the Ticket Management area. You'll need to refresh screen to see the new statuses. Clicking a status will show all
+	   tickets currently in that status EXCEPT spam tickets and tickets waiting to be assigned. Staff must be granted permissions to view statuses if not admins.
+	   <hr>
+	   <a href="screenshots/137.jpg" onclick="window.open(this);return false"><img src="screenshots/137.jpg" class="screenshot" alt="Screenshot" title="Click for Fullsize"></a>
+	   <hr>
+	   On any status ticket view list screen, same permissions apply as for other ticket screens.
+     </div>
+    </div>
+
+	<div class="row-fluid">
+	<script src="pages/js/footer.js"></script>
+	<noscript>Please enable javascript to view footer.</noscript>
+   </div>
+
+  </div>
+
+  </div>
+  <script src="pages/js/plugins/jquery.bootstrap.js"></script>
+
+ </body>
+</html>

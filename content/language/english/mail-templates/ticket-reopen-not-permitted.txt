@@ -1,0 +1,20 @@
+Ticket Reply Not Permitted
+
+<-{separater}->
+
+Hi {NAME},
+
+You recently replied to a previously closed ticket and our system does not allow this ticket to be reopened by email.
+
+Ticket No: #{TICKET}
+Subject: {SUBJECT}
+
+If you wish to reopen this ticket or add a new ticket, please log in to your support account.
+{WEBSITE_URL}/?t={ID}
+
+Kind regards,
+
+<-{separater}->
+
+{WEBSITE_NAME}
+{WEBSITE_URL}

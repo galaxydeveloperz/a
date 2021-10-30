@@ -1,0 +1,3 @@
+https://github.com/albert-gonzalez/easytimer.js
+
+No licence implied. Assumed GPL.

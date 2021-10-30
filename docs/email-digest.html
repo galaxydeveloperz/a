@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+
+	<meta charset="utf-8">
+    <title>Email Digest: Maian Support - Documentation</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="pages/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="pages/css/bootstrap-responsive.css" type="text/css">
+    <link rel="stylesheet" href="pages/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="pages/css/font-awesome/font-awesome.css">
+
+	<script src="pages/js/jquery.js"></script>
+	<link rel="stylesheet" href="pages/css/ms.css" type="text/css">
+    
+	<!--[if lt IE 9]>
+    <script src="pages/js/html5.js"></script>
+    <![endif]-->
+
+    <link rel="SHORTCUT ICON" href="favicon.ico">
+  </head>
+
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7"> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8"> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9"> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!-->
+  <body class="">
+  <!--<![endif]-->
+
+   <div class="navbar">
+        <div class="navbar-inner">
+                <script src="pages/js/header.js"></script>
+				<noscript>Please enable javascript to view header.</noscript>
+				<a class="brand" href="index.html" title="Maian Support: Documentation"><span class="first">Maian Support: Documentation</span></a>
+	    </div>
+    </div>
+
+  <div class="sidebar-nav">
+  <script src="pages/js/nav-menu.js"></script>
+  <noscript>Please enable javascript to view menu.</noscript>
+  </div>
+  <div class="content">
+
+  <div class="header">
+
+	<h1 class="page-title">Email Digest</h1>
+    <span class="clearfix"></span>
+
+  </div>
+
+  <ul class="breadcrumb">
+    <li>Visitor Account <span class="divider">/</span></li>
+    <li class="active">Email Digest</li>
+  </ul>
+
+  <div class="container-fluid">
+
+   <div class="block">
+    <div class="block-body">
+     The email digest is list of current open tickets/disputes, sent via email. It also includes tickets awaiting <a href="assign.html">assignment</a> and also displays tickets flagged as spam and moved to <a href="spam.html">spam tickets</a>. Digest can be triggered via a cron and run as many times as needed to specified users.
+	 Email Digest is only sent to users who have this option <a href="team.html">enabled</a>. You can also specify which days to send notifications if you prefer
+	 users to only have them sent on certain days.
+    </div>
+   </div>
+
+   <div class="block">
+	 <p class="block-heading">Commercial Licence Required</p>
+     <div class="block-body">
+	   The email digest is only available in the commercial version.
+     </div>
+   </div>
+
+   <div class="block">
+	 <p class="block-heading">Email Digest Contents</p>
+     <div class="block-body">
+	   The email digest transmits the following if enabled and permissions allow:<br><br>
+     <b>Tickets To Be Assigned<br>
+     Tickets Flagged as Spam and Moved to Spam Tickets<br>
+     New Open Tickets - No Replies<br>
+     Open Tickets - Waiting for Staff Reply<br>
+     Open Tickets - Waiting for Visitor Reply<br>
+     New Open Disputes - No Replies<br>
+     Open Disputes - Waiting for Staff Reply<br>
+     Open Disputes - Waiting for Visitor Reply</b><br><br>
+     Note that users will only get information on tickets they have department access for.<br><br>
+	   Disputes are only included if the <a href="disputes.html">dispute system</a> is <a href="settings.html">enabled</a>.
+     </div>
+   </div>
+
+   <div class="block">
+	 <p class="block-heading">Email Template</p>
+     <div class="block-body">
+	   The email templates for the email digest arelocated at:<br><br>
+       <b>content/language/*language*/mail-templates/email-digest*.txt</b><br><br>
+      You can remove any areas you don`t need, but you should make backup files in case you need to revert back. More info on the email template structure <a href="install_7.html">here</a>.
+     </div>
+   </div>
+   
+   <div class="block">
+	 <p class="block-heading">Email Digest Cron</p>
+     <div class="block-body">
+	   File to run: <b>control/cron/email-digest.php</b><br><br>
+	   More info on Cron Jobs <a href="install_3.html">here</a>
+     </div>
+   </div>
+
+   <div class="block">
+	 <p class="block-heading">Omit Users from Receiving Email Digest</p>
+     <div class="block-body">
+	   Email Digest is enabled/disabled for support team members when adding/editing member. More info <a href="team.html">here</a>.
+     </div>
+   </div>
+
+   <div class="block">
+	 <p class="block-heading">Log Digest with No Emails</p>
+     <div class="block-body">
+	   If you prefer you can have the digest logged instead of sending emails. If you wish to log the digest for other ops,
+	   open the 'control/cron/email-digest.php' file and set the 'LOG_DIGEST_NO_EMAILS' option to 1. You can also specify an
+	   alternative same path via the 'LOG_DIGEST_FILE_LOC' option.
+	   </div>
+   </div>
+   
+   <div class="row-fluid">
+	<script src="pages/js/footer.js"></script>
+	<noscript>Please enable javascript to view footer.</noscript>
+   </div>
+
+  </div>
+
+  </div>
+  <script src="pages/js/plugins/jquery.bootstrap.js"></script>
+
+ </body>
+</html>

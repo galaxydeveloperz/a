@@ -1,0 +1,22 @@
+<script>
+//<![CDATA[
+jQuery(document).ready(function() {
+  if (jQuery('input[name="js_ts"]')) {
+    jQuery('input[name="js_ts"]').remove();
+  }
+  var d = new Date();
+  jQuery('#mswform').append('<input type="hidden" name="js_ts" value="' + d.getFullYear() + '">');
+  var options = {
+    dataType : 'json',
+    success  : mswPR_Callback
+  };
+  jQuery('#mswform').on('submit', function(e) {
+    mswShowSpinner();
+    e.preventDefault();
+    jQuery(this).ajaxSubmit(options);
+    return false;
+  });
+  mswDeptLoader('{id}', 'yes');
+});
+//]]>
+</script>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+
+	<meta charset="utf-8">
+    <title>Upgrades - Template Changes v4.2: Maian Support - Documentation</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="pages/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="pages/css/bootstrap-responsive.css" type="text/css">
+    <link rel="stylesheet" href="pages/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="pages/css/font-awesome/font-awesome.css">
+
+	<script src="pages/js/jquery.js"></script>
+	<link rel="stylesheet" href="pages/css/ms.css" type="text/css">
+
+	<!--[if lt IE 9]>
+    <script src="pages/js/html5.js"></script>
+    <![endif]-->
+
+    <link rel="SHORTCUT ICON" href="favicon.ico">
+  </head>
+
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7"> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8"> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9"> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!-->
+  <body class="">
+  <!--<![endif]-->
+
+   <div class="navbar">
+        <div class="navbar-inner">
+                <script src="pages/js/header.js"></script>
+				<noscript>Please enable javascript to view header.</noscript>
+				<a class="brand" href="index.html" title="Maian Support: Documentation"><span class="first">Maian Support: Documentation</span></a>
+	    </div>
+    </div>
+
+  <div class="sidebar-nav">
+  <script src="pages/js/nav-menu.js"></script>
+  <noscript>Please enable javascript to view menu.</noscript>
+  </div>
+  <div class="content">
+
+  <div class="header">
+
+	<h1 class="page-title">Upgrades - Template Changes v4.2</h1>
+    <span class="clearfix"></span>
+
+  </div>
+
+  <ul class="breadcrumb">
+    <li>Maian Support <span class="divider">/</span></li>
+    <li class="active">Upgrades - Template Changes v4.2</li>
+  </ul>
+
+  <div class="container-fluid">
+
+   <div class="block">
+    <p class="block-heading">Information</p>
+    <div class="block-body">
+     Template changes are shown below for v4.2. If you aren`t sure, view the current file in the latest zip.
+	</div>
+
+   </div>
+
+   <div class="block">
+	 <p class="block-heading">New Files / Folders</p>
+     <div class="block-body">
+       content/**theme**/account-close.tpl.php
+	   </div>
+    </div>
+
+   <div class="block">
+	 <p class="block-heading">Header Template Updates</p>
+     <div class="block-body">
+       None
+	   </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">Footer Template Updates</p>
+     <div class="block-body">
+       None
+	   </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">Nav Menu Updates</p>
+     <div class="block-body">
+       <span class="badge">1</span> Find the opening "if" statement:<br><br>
+       if ($this->SETTINGS->disputes == 'yes') {<br><br>
+       <span class="badge">2</span> AFTER it`s closing }, add the following:<br><br>
+       if ($this-&gt;SETTINGS-&gt;visclose == 'yes') {<br>
+       ?&gt;<br>
+       &lt;div&gt;&lt;a href="&lt;?php echo $this-&gt;SETTINGS-&gt;scriptpath; ?&gt;/?p=close"&gt;&lt;i class="fa fa-times fa-fw"&gt;&lt;/i&gt; &lt;?php echo $this-&gt;PB_TXT_LNG[5]; ?&gt;&lt;/a&gt;&lt;/div&gt;<br>
+       &lt;?php<br>
+       }
+	   </div>
+    </div>
+
+   <div class="block">
+	 <p class="block-heading">Other Template Updates</p>
+     <div class="block-body">
+       <span class="badge">1</span> Open <b>content/**theme**/account-profile.tpl.php</b>. AFTER the closing &lt;/ol&gt; tag, add the following:<br><br>
+       &lt;?php<br>
+       // Show this message if password needs changing..<br>
+       if ($this-&gt;ACCOUNT['system2'] == 'forcepasschange') {<br>
+       ?&gt;<br>
+       &lt;div class="row"&gt;<br>
+         &nbsp;&nbsp;&lt;div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"&gt;<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="panel panel-danger"&gt;<br>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="panel-body"&gt;<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="fa fa-warning fa-fw"&gt;&lt;/i&gt; &lt;b&gt;&lt;?php echo $this->TXT[16][2]; ?&gt;&lt;/b&gt;<br>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+         &nbsp;&nbsp;&lt;/div&gt;<br>
+       &lt;/div&gt;<br>
+       &lt;?php<br>
+       }
+       ?&gt;
+	   </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">CSS Updates</p>
+     <div class="block-body">
+       <span class="badge">1</span> Open <b>content/**theme**/css/theme.css</b>. At the bottom add:<br><br>
+       .delconfirmbar {<br>
+       &nbsp;&nbsp;border-top: 1px solid #ff9999;<br>
+       &nbsp;&nbsp;border-bottom: 1px solid #ff9999;<br>
+       &nbsp;&nbsp;margin-bottom:20px;<br>
+       &nbsp;&nbsp;font-size: 15px;<br>
+       &nbsp;&nbsp;font-weight: bold;<br>
+       &nbsp;&nbsp;border-radius: 0;<br>
+       &nbsp;&nbsp;border-left:0;<br>
+       &nbsp;&nbsp;border-right:0;<br>
+       }
+	   </div>
+    </div>
+
+  <div class="block">
+	 <p class="block-heading">Javascript Updates</p>
+     <div class="block-body">
+       <span class="badge">1</span> Open the latest <b>content/**/js/msops.js</b> file in a text editor.<br><br>
+       <span class="badge">2</span> Copy and paste the <b>closeAcc</b> function into your <b>content/**/js/msops.js</b> file.
+	   </div>
+    </div>
+
+    <p>
+    <a href="upgrades1.html"><i class="icon-chevron-left"></i> Return to Upgrade Instructions</a>
+   </p>
+
+  <div class="row-fluid">
+	<script src="pages/js/footer.js"></script>
+	<noscript>Please enable javascript to view footer.</noscript>
+   </div>
+
+  </div>
+
+  </div>
+  <script src="pages/js/plugins/jquery.bootstrap.js"></script>
+
+ </body>
+</html>

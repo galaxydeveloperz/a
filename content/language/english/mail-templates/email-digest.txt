@@ -1,0 +1,21 @@
+EMAIL DIGEST: {DATE} @ {TIME}
+
+<-{separater}->
+
+Hi {NAME},
+
+The following tickets are currently active:
+
+{DIGEST}
+
+==================================================================
+
+Note that some of the above may have been updated since this message was sent.
+
+Support administration centre:
+{WEBSITE_URL}/{ADMIN_FOLDER}/
+
+<-{separater}->
+
+{WEBSITE_NAME}
+{WEBSITE_URL}

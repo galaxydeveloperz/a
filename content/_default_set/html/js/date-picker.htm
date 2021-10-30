@@ -1,0 +1,21 @@
+<script>
+//<![CDATA[
+function mswFldDatePicker(obj) {
+  jQuery(obj).datepicker({
+    changeMonth     : true,
+    changeYear      : true,
+    monthNamesShort : {cal_short},
+    dayNamesMin     : {cal_daysmin},
+    firstDay        : {cal_firstday},
+    dateFormat      : '{cal_format}',
+    isRTL           : {cal_rtl}
+  });
+}
+// Attach event handlers for calendar field boxes (reply area only)..
+jQuery('#two input[type="text"]').each(function(){
+  if (jQuery(this).hasClass('jsdatepicker')) {
+    mswFldDatePicker(this); 
+  }
+});
+//]]>
+</script>

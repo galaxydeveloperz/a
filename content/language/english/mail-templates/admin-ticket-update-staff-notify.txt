@@ -1,0 +1,27 @@
+Ticket Update Notification
+
+<-{separater}->
+
+Hi {NAME},
+
+{STAFF_MEMBER} has made a reply to the following ticket:
+
+Ticket ID: #{TICKET}
+Subject: {SUBJECT}
+Started By: {STARTER}
+
+Comments added (note that you may need to view the actual ticket for certain formatting):
+
+{REPCOMMS}
+
+To view this ticket, log into your staff control panel:
+{WEBSITE_URL}/{ADMIN_FOLDER}/?ticket={ID}
+
+Kind regards,
+
+------------------------------------
+
+<-{separater}->
+
+{WEBSITE_NAME} Support Team
+{WEBSITE_URL}

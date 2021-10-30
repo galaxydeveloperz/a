@@ -1,0 +1,143 @@
+/* SMALL SCREENS ONLY
+-------------------------------------*/
+
+@media only screen and (max-width: 991px) {
+  .msheader .msheaderright a i {
+    font-size: 18px;
+  }
+  .panel-heading .dropdown-menu {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .msheader .msheaderright {
+    margin-top: 0;
+  }
+  .panel-heading .dropdown-menu {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .msheader .msheaderright {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  footer {
+    font-size: 11px !important;
+  }
+
+  .panel-default .mswforceleftalign {
+    text-align: left !important;
+  }
+
+  .panel-default .left-align {
+    text-align: left !important;
+  }
+
+  .breadcrumb li {
+    display: none !important;
+  }
+
+  .breadcrumb > li + li:before {
+    padding: 0;
+    content: "";
+  }
+
+  .breadcrumb .active {
+    display: inline !important;
+  }
+
+  .graphbar div:nth-child(2) {
+    text-align: center !important;
+  }
+
+  .graphbar div:nth-child(2) span {
+    display: block;
+  }
+
+  .rightmostprofoption {
+    right: 0 !important;
+    left: auto !important;
+  }
+
+  .bbButtons span {
+    display: block;
+    margin: 5px 0 5px 0;
+  }
+
+  .mobilebreakpoint {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .hideminiscreen {
+    display: none !important;
+  }
+
+  .printarticle {
+    text-align: left !important;
+    margin-top:10px;
+  }
+
+  .votefont {
+    font-size: 15px;
+  }
+
+  .mobilemenu {
+    text-align: center !important;
+  }
+
+  .logoutdivarea {
+    background: url(../images/loading.gif) no-repeat 98% 98%;
+  }
+  .panel-heading .dropdown-menu {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
+@media only screen and (max-width:326px) {
+  .verysmalladjustment {
+    right: auto !important;
+    left: 0 !important;
+  }
+}
+
+@media only screen and (max-width : 320px) {
+  .navbar-inner .container {
+    height: 45px;
+  }
+  .pushy a {
+    font-size: 15px !important;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .navbar-inner .container {
+    height: 45px;
+  }
+  .pushy a {
+    font-size: 15px !important;
+  }
+  .panel-heading .dropdown-menu {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+@media only screen and (max-width : 768px) {
+  .navbar-inner .container {
+    height: 45px;
+  }
+  .pushy a {
+    font-size: 15px !important;
+  }
+  .panel-heading .dropdown-menu {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}

@@ -1,0 +1,537 @@
+/*
+  Bootstrap theme overrides
+*/
+
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Muli'), url(../fonts/muli.woff2) format('woff2'), url(../fonts/muli.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Muli Italic'), local('Muli-Italic'), url(../fonts/muli-italic.woff2) format('woff2'), url(../fonts/muli-italic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Muli Bold'), local('Muli-Bold'), url(../fonts/muli-bold700.woff2) format('woff2'), url(../fonts/muli-bold700.woff) format('woff');
+}
+
+body {
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #555;
+  background: #fcfcfc url(../images/bg.png) fixed;
+}
+
+a {
+  color: #008097;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+h2.head_h2 {
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom:1px solid #ddd;
+  padding-bottom: 10px;
+  text-transform:uppercase;
+  margin-bottom: 20px;
+}
+
+.tooltip {
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.popover {
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.btn {
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.btn-primary {
+  background: #008097;
+  border: 1px solid #008097;
+}
+
+.breadcrumb {
+  background: #fff !important;
+  border: 2px solid #ddd;
+}
+
+.well {
+  border: 2px solid #ddd;
+  box-shadow: none;
+  padding: 15px;
+}
+
+#mscontainer .panel .panel-heading a {
+  color: #555;
+}
+
+/* Container */
+.nocanvas {
+  font-size: 25px;
+  margin-right: 0;
+  display: inline-block;
+}
+
+.margin-top-container {
+  margin-top: 20px;
+}
+
+.error-top-container {
+  margin-top: 50px;
+}
+
+.hidetkfltrs {
+  text-align: left !important;
+}
+
+.mobilefilterarea {
+  margin-bottom: 5px;
+}
+
+.colorchangeheader {
+  color: #555 !important;
+}
+
+.margin_right_20 {
+  margin-right: 20px;
+}
+
+.logoutdivarea {
+  background: url(../images/loading.gif) no-repeat 98% 50%;
+}
+
+.superbig {
+  font-size: 26px;
+}
+
+.nothing_to_see {
+  font-style:italic;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.nodec {
+  text-decoration: none !important;
+}
+
+.margin_top_10 {
+  margin-top: 10px;
+}
+
+.margin_top_20 {
+  margin-top: 20px;
+}
+
+/* Account */
+.accountinfo {
+  line-height: 25px;
+}
+
+#mscontainer {
+  padding-bottom: 50px;
+}
+
+.text_height_25 {
+  line-height: 25px;
+}
+
+.bbButtons {
+  margin-bottom: 5px;
+}
+
+.bbButtons button {
+  font-size: 11px;
+}
+
+#mscontainer .panel {
+  border-width: 2px;
+}
+
+#mscontainer .panel .panel-heading {
+  background: #f5f5f5 url(../images/panel-bg.png) !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #555;
+  padding-top:12px;
+}
+
+.panel-heading .dropdown-menu {
+  max-height: 250px;
+  overflow: auto;
+  text-transform: none !important;
+}
+
+.panel-heading .dropdown-menu a {
+  font-size: 13px;
+}
+
+.msw-green {
+  color: #5CB85C;
+}
+
+.highlightPass,.highlight_txt {
+  color: #2E91A3;
+}
+
+/* FAQ */
+.votefont {
+  font-size: 20px;
+}
+
+.votefont div span {
+  color:#2E91A3;
+}
+
+.votefont div i:hover {
+  color: #3393A3 !important;
+}
+
+.totalvotes {
+  border-top:1px dashed #ddd;
+  margin-top:20px;
+  padding-top: 10px;
+  font-style: italic;
+}
+
+.faqquestionwrapper {
+  padding:0;
+}
+
+.faqquestion {
+  border-bottom: 1px dotted #ddd;
+  padding: 15px;
+}
+
+.faqquestion:last-child {
+  border-bottom: 0;
+}
+
+.faqquestion div {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.faqquestion:hover {
+  background: #faf9f9;
+}
+
+/* Tables */
+.table thead tr th {
+  border-top:0;
+  padding-top:10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color:#008097;
+}
+.table thead tr th .fa-ellipsis-v {
+  font-weight:normal;
+  color:#555;
+}
+td select {
+  width: auto !important;
+}
+
+.ticketbar {
+  color: #555;
+  font-size: 13px;
+  background:#fff url(../images/bar-bg.png) fixed;
+}
+
+.ticket_highlight {
+  color: #008298;
+}
+
+.ticketbar .pull-right {
+  color: green;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+/* Tabs */
+.mstabmenuarea .nav-tabs {
+  border-bottom: 2px solid #ddd;
+}
+
+.mstabmenuarea .nav-tabs .active a.dropdown-toggle {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Forms */
+.form-group label {
+  font-weight: normal;
+}
+
+.form_box_margin_5 {
+  margin-top: 5px;
+}
+
+/* Pages */
+.mswpages {
+  text-align: right;
+}
+
+.faqpages .mswpages {
+  text-align: left;
+}
+
+/* Nav Header */
+.msheader {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.toppagebar {
+  color: #555;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  background: #f5f5f5 url(../images/panel-bg.png) !important;
+  font-size: 15px;
+  border-bottom: 2px solid #c0c0c0;
+}
+
+.toppagebar a {
+  color: #555;
+}
+
+.navbar {
+  background: #0089a1 url(../images/nav-bg.png);
+  color: #fff;
+  border: 0;
+  border-bottom: 3px solid #c0c0c0;
+  padding: 10px 0 10px 0;
+  border-radius: 0;
+}
+
+.navbar-default,
+.navbar-default {
+  border-radius: 0;
+}
+
+.navbar .container .fa-bars {
+  font-size: 25px;
+  cursor:pointer;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.navbar a {
+  color: #fff;
+}
+
+.navbar .table-responsive .table td {
+  border:0;
+}
+
+.navbar .table {
+  padding:0;
+  margin:0;
+}
+
+.navbar .table td:first-child {
+  width: 5%;
+  text-align: left;
+}
+
+.navbar .table td:nth-child(2) {
+  text-align: left;
+  font-size: 20px;
+}
+
+.navbar .table td:nth-child(3) {
+  text-align: right;
+  font-size: 16px;
+  padding-top:12px;
+}
+
+.navbar .table td:nth-child(3) a {
+  font-size: 15px;
+}
+
+.navbar .table td:nth-child(3) a {
+  margin-right: 10px;
+}
+
+/* Other */
+.highlight {
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: #F9F9F9 url(../images/footer-bg.png);
+  margin-top: 10px;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #444;
+  border-top: 2px solid #ddd;
+  height: 60px;
+  text-align: center;
+}
+
+footer a {
+  color: #444;
+}
+
+footer a:hover {
+  color: #888;
+  text-decoration: none;
+}
+
+/* Spinner */
+.overlaySpinner {
+  padding: 50px;
+  color: #555;
+}
+.overlaySpinner {
+  position: fixed;
+  z-index: 1000001;
+}
+.overlaySpinner {
+  text-indent: -100000px;
+  width: 100px;
+  border: 2px solid #C0C0C0;
+  height: 100px;
+  background: #fff url(../images/ibox/loading.gif) center center no-repeat;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.boxspinner {
+  background:url(../images/indicator.gif) no-repeat 98% 50%;
+}
+.areaspinner {
+  background:url(../images/loading.gif) no-repeat 50% 50%;
+}
+
+/* Tickets */
+.filetypes {
+  text-transform: uppercase;
+}
+
+.requiredfield {
+  color: #FF6861;
+  margin-left: 20px;
+}
+
+.ticketDate {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #66748f;
+}
+
+.ticketPriority {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.ticketStatusBarDispute {
+  display: block;
+  font-size: 11px;
+  font-style: italic;
+  margin-top: 10px;
+  color: #66748f;
+}
+
+.ticketsubject {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.mobilebreakpoint {
+  display: inline;
+}
+
+/* Question */
+.attachinfo {
+  font-style: italic;
+  font-size: 12px;
+  display: block;
+  color: #02798E;
+  margin-top:5px;
+}
+
+/* Boottrap overrides */
+span.label {
+  font-weight: normal !important;
+  font-size: 11px;
+}
+
+.panel {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.adminpanelfooter {
+  background: #FCF8E3 !important;
+  border-color: #FAEBCC !important;
+}
+
+.delconfirmbar {
+  border-top: 1px solid #ff9999;
+  border-bottom: 1px solid #ff9999;
+  margin-bottom:20px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 0;
+  border-left:0;
+  border-right:0;
+}
+
+.panel-no-padding {
+  padding:0 !important;
+}
+
+.panel-no-padding .table {
+  margin-bottom:0;
+}
+
+.panel-no-padding i.fa-ellipsis-v {
+  color: #2E91A3;
+}
+
+#mscontainer .alert {
+  border-width: 2px;
+}
+
+.draftarea {
+  font-size: 12px;
+  font-style:italic;
+}
+
+.table-responsive .table thead tr th .slant {
+  color: #f66f66;
+}

@@ -1,0 +1,41 @@
+/*
+  Print Friendly
+*/
+
+body {
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #555;
+  background: #fff;
+}
+
+.breadcrumb {
+  font-size: 15px;
+}
+
+.toppagebar, .navbar, footer, .breadcrumb li:first-child, .breadcrumb li:nth-child(2),.ticketbuttonarea,
+#replyArea .repar, #replyArea .mstabmenuarea, .colorchangeheader .btn-group, .ticketsublinks, .alert-danger,
+.visitorpanelfooter, .adminpanelfooter .pull-right, .historyarea .text-right {
+  display: none !important;
+}
+
+#mswform .startheader {
+  height: 100px !important;
+}
+
+.historyarea {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.colorchangeheader {
+  height: 40px !important;
+}
+
+.history-panel .panel-heading .pull-left {
+  margin:0 !important;
+}
+
+.mswcf {
+  display: inline !important;
+}

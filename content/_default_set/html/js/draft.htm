@@ -1,0 +1,44 @@
+<script>
+//<![CDATA[
+function mswGetDraft(id) {
+  jQuery.ajax({
+    url      : 'index.php',
+    data     : 'ajax=tickdraft-load&id=' + id,
+    dataType : 'json',
+    cache    : false,
+    success  : function (data) {
+      if (data['msg'] == 'saved') {
+        jQuery('#draft_' + id).html(data['text']);
+        setTimeout(function() {
+        	jQuery('#draft_' + id).fadeOut(800);
+        }, {draft_msg_timeout});
+        jQuery('#comments').val(data['draft']);
+      } else {
+        jQuery('#draft_' + id).html('');
+      }
+    }
+  });
+  return false;
+}
+jQuery(document).ready(function() {
+  var timeoutId;
+  jQuery('#comments').on('keypress', function() {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(function() {
+      jQuery.post('index.php?ajax=tickdraft-save', { 
+        draft : jQuery('#comments').val(),
+        id    : {post_id}
+        }, function(data) {
+          jQuery('#draft_{id}').html(data['text']).show();
+          setTimeout(function() {
+          	jQuery('#draft_{id}').fadeOut(800);
+          }, {draft_msg_timeout});
+      }, 'json'); 
+    }, {draft_timeout});
+  });
+  mswGetDraft('{id}');
+});
+//]]>
+</script>
